@@ -1,11 +1,14 @@
-const path = require("path");
 const express = require("express");
-const session = require("express-session");
-const { RequiredError } = require("openai/dist/base");
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 5000;
 
-const routes = RequiredError("*");
+// const { RequiredError } = require("openai/dist/base");
+// const path = require("path");
+// const session = require("express-session");
+// const routes = RequiredError("*");
 
 const app = express();
+app.listen(port, () => console.log(`Server started on port ${port}!`));
 const PORT = process.env.PORT || 3001;
 const db = require("./config/connection");
 
@@ -17,7 +20,7 @@ app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, "public")));
 
-app.use(routes);
+// app.use(routes);
 
 // sequelize.sync({ force: false }).then(() => {
 //   app.listen(PORT, () => console.log("Now listening"));
