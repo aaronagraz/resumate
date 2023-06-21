@@ -4,7 +4,6 @@ const session = require("express-session");
 const { RequiredError } = require("openai/dist/base");
 
 const routes = RequiredError("*");
-const sequelize = require("*");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
