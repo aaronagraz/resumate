@@ -33,7 +33,7 @@ const Home = () => {
   const [workValue, setworkValue] = useState("");
   // const [jobDescription, setjobDescription] = useState("");
   const [generatedText, setgeneratedText] = useState("");
-  const [generatetext, { data }] = useMutation(GENERATE_TEXT);
+  // const [generatetext, { data }] = useMutation(GENERATE_TEXT);
   const handleJobDescription = (event) => {
     setjobDescription(event.target.value);
 
@@ -62,7 +62,7 @@ const Home = () => {
   // const handleChange = (event) => {
   //   setInputValue(event.target.value);
   // };
-  const [addUser] = useMutation(ADD_USER);
+  // const [addUser] = useMutation(ADD_USER);
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
